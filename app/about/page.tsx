@@ -5,7 +5,7 @@ export default function About() {
     {
       company: "ELA Software",
       title: "Product Owner / Responsable d'équipe",
-      date: "Oct. 2016 - Aujourd’hui (8 ans 4 mois)",
+      date: "Oct. 2016 - Aujourd'hui (8 ans 4 mois)",
       location: "Vertou, Pays de la Loire, France",
       description: [
         "Encadrement d'une équipe de développeurs et gestion des projets stratégiques.",
@@ -23,8 +23,8 @@ export default function About() {
       date: "Juin 2016 - Sept. 2016 (4 mois)",
       location: "Le Temple, France",
       description: [
-        "Développement d’interfaces sur des machines de conditionnement (VB6).",
-        "Programmation d’un équipement d’identification (codes à barres) en Java."
+        "Développement d'interfaces sur des machines de conditionnement (VB6).",
+        "Programmation d'un équipement d'identification (codes à barres) en Java."
       ],
     },
     {
@@ -33,7 +33,7 @@ export default function About() {
       date: "Sept. 2013 - Mai 2016 (2 ans 9 mois)",
       location: "IUT Blagnac, France",
       description: [
-        "Développement d’un logiciel de simulation de compatibilité électromagnétique."
+        "Développement d'un logiciel de simulation de compatibilité électromagnétique."
       ],
     },
     {
@@ -43,7 +43,7 @@ export default function About() {
       location: "Parthenay, France",
       description: [
         "Maintenance informatique.",
-        "Développement d’un site intranet en HTML/CSS."
+        "Développement d'un site intranet en HTML/CSS."
       ],
     }
   ];
@@ -54,7 +54,7 @@ export default function About() {
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-12 rounded-lg shadow-lg mb-8">
         <h1 className="text-5xl font-bold">À propos de moi</h1>
         <p className="text-lg mt-2">
-          Product Owner et Développeur passionné par l'innovation et la technologie.
+          Product Owner et Développeur passionné par l&apos;innovation et la technologie.
         </p>
       </div>
 

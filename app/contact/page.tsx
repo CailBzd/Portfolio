@@ -13,8 +13,14 @@ export default function Contact() {
   const [status, setStatus] = useState<string | null>(null);
 
   useEffect(() => {
+    const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+
+    if (!userId) {
+      console.error('EmailJS user ID is missing. Please set the NEXT_PUBLIC_EMAILJS_USER_ID environment variable.');
+      return;
+    }
     // Initialisation d'EmailJS avec la clé publique
-    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID); // Remplace par ta clé publique
+    emailjs.init(userId); // Remplace par ta clé publique
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -27,12 +33,18 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setStatus("Envoi en cours...");
 
     // Setup EmailJS
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID; // Remplace par ton ID de service EmailJS
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID; // Remplace par ton ID de template EmailJS
+
+    if (!serviceID || !templateID) {
+      console.error('EmailJS service ID or template ID is missing.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setStatus("Envoi en cours...");
 
     // Envoi du formulaire avec EmailJS
     emailjs
@@ -40,12 +52,15 @@ export default function Contact() {
       .then(
         (result) => {
           setIsSubmitting(false);
-          setStatus("Message envoyé avec succès !");
+          console.log('Message envoyé avec succès', result);  // Utilisation de `result`
+          setStatus("Message envoyé avec succès !",);
           setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           setIsSubmitting(false);
-          setStatus("Erreur lors de l'envoi du message.");
+
+          console.error('Erreur d\'envoi du message', error);
+          setStatus("Erreur lors de l\'envoi du message.");
         }
       );
   };
