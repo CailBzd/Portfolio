@@ -8,7 +8,7 @@ export default function Home() {
       Développeur et Responsable produit, je me consacre à guider mes projets avec rigueur, en surmontant les défis pour atteindre des résultats durables.
       </p>
       <div className="mt-6">
-        <Link href="/projects">
+        <Link href="/project">
           <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
             Voir mes projets 🚀
           </button>

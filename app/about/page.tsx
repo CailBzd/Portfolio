@@ -1,4 +1,4 @@
-import { Briefcase, MapPin, Calendar } from "lucide-react";
+import { Briefcase, MapPin, Calendar, BookOpen } from "lucide-react";
 
 export default function About() {
   const experiences = [
@@ -48,6 +48,33 @@ export default function About() {
     }
   ];
 
+  const formations = [
+    {
+      school: "Orsys",
+      degree: "Formation Management d'Équipe",
+      date: "Novembre 2024",
+      location: "Formation externe",
+    },
+    {
+      school: "IUT Blagnac",
+      degree: "Licence Pro - Analyse des systèmes informatiques",
+      date: "2013 - 2014",
+      location: "Blagnac, France",
+    },
+    {
+      school: "Lycée Léonce Vieljeux - La Rochelle",
+      degree: "BTS IRIS - Informatique et Réseaux",
+      date: "2010 - 2012",
+      location: "La Rochelle, France",
+    },
+    {
+      school: "Lycée Paul Guérin - Niort",
+      degree: "Baccalauréat STI - Génie Mécanique Productique",
+      date: "2008 - 2010",
+      location: "Niort, France",
+    }
+  ];
+
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md">
       {/* Header Section */}
@@ -58,8 +85,14 @@ export default function About() {
         </p>
       </div>
 
+      {/* Navigation rapide */}
+      <div className="flex justify-center space-x-6 mb-8">
+        <a href="#experience" className="text-blue-600 hover:underline font-medium">Expériences</a>
+        <a href="#formation" className="text-blue-600 hover:underline font-medium">Formations</a>
+      </div>
+
       {/* Expériences Professionnelles */}
-      <h2 className="text-3xl font-semibold mb-6 text-gray-800">Expérience Professionnelle</h2>
+      <h2 id="experience" className="text-3xl font-semibold mb-6 text-gray-800">Expérience Professionnelle</h2>
       <div className="relative border-l-4 border-blue-500 ml-4 pl-6 space-y-8">
         {experiences.map((exp, index) => (
           <div key={index} className="relative bg-gray-100 p-6 rounded-lg shadow-md">
@@ -90,6 +123,35 @@ export default function About() {
                 <li key={idx}>{desc}</li>
               ))}
             </ul>
+          </div>
+        ))}
+      </div>
+
+      {/* Formations */}
+      <h2 id="formation" className="text-3xl font-semibold mt-12 mb-6 text-gray-800">Formation</h2>
+      <div className="relative border-l-4 border-green-500 ml-4 pl-6 space-y-8">
+        {formations.map((edu, index) => (
+          <div key={index} className="relative bg-gray-100 p-6 rounded-lg shadow-md">
+            {/* Icône */}
+            <div className="absolute -left-9 top-6 bg-green-500 text-white p-2 rounded-full shadow-md">
+              <BookOpen size={24} />
+            </div>
+
+            {/* Titre et Établissement */}
+            <h3 className="text-xl font-bold text-gray-900">{edu.degree}</h3>
+            <p className="text-gray-600 font-medium">{edu.school}</p>
+
+            {/* Date et Lieu */}
+            <div className="flex items-center text-gray-500 mt-2 space-x-4">
+              <div className="flex items-center space-x-1">
+                <Calendar size={16} />
+                <span>{edu.date}</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <MapPin size={16} />
+                <span>{edu.location}</span>
+              </div>
+            </div>
           </div>
         ))}
       </div>
