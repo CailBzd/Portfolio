@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav>
               <ul className="flex space-x-4">
                 <li><Link href="/" className="hover:underline">Accueil</Link></li>
-                <li><Link href="/projects" className="hover:underline">Projets</Link></li>
+                <li><Link href="/project" className="hover:underline">Projets</Link></li>
                 <li><Link href="/about" className="hover:underline">À propos</Link></li>
                 <li><Link href="/contact" className="hover:underline">Contact</Link></li>
               </ul>
