@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css"; // Assure-toi que Tailwind est bien importé ici.
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Mon Portfolio",
@@ -8,6 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const isValidRoute = true; // Remplace par une logique de validation si nécessaire
+
+  if (!isValidRoute) {
+    notFound(); // Redirige vers la page 404 si la route est invalide
+  }
+  
   return (
     <html lang="fr">
       <body className="bg-gray-100 text-gray-900">
