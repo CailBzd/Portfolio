@@ -29,7 +29,7 @@ export default function About() {
     },
     {
       company: "Nexio SAS",
-      title: "Alternant Analyste Programmeur",
+      title: "Analyste Programmeur",
       date: "Sept. 2013 - Mai 2016 (2 ans 9 mois)",
       location: "IUT Blagnac, France",
       description: [

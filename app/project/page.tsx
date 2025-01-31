@@ -4,13 +4,42 @@ import React from "react";
 
 export default function Projects() {
   const projects = [
-    { name: "ViviLink-App", repo: "CailBzd/ViviLink-App" },
-    { name: "LocalMarketPlace", repo: "CailBzd/LocalMarketPlace" },
-    { name: "ViviLink-Server", repo: "CailBzd/ViviLink-Server" },
-    { name: "my-building-project", repo: "CailBzd/my-building-project" },
-    { name: "mon-projet-finance", repo: "CailBzd/mon-projet-finance" },
-    { name: "nextjs-cctp-builder", repo: "CailBzd/nextjs-cctp-builder" },
-    { name: "MyTemplate", repo: "CailBzd/MyTemplate" }
+    {
+      name: "Porfolio",
+      repo: "CailBzd/Portfolio",
+      description: "Mon portfolio personnel, présentant mes projets et compétences.",
+      technologies: "Next.js, Tailwind CSS, Vercel"
+    },
+    {
+      name: "ViviLink-App",
+      repo: "CailBzd/ViviLink-App",
+      description: "Un réseau social de quartier permettant aux habitants d'échanger des services et des événements locaux.",
+      technologies: "React Native, Firebase, TypeScript"
+    },
+    {
+      name: "LocalMarketPlace",
+      repo: "CailBzd/LocalMarketPlace",
+      description: "Une plateforme pour vendre et acheter des produits locaux facilement.",
+      technologies: "React, Node.js, MongoDB"
+    },
+    {
+      name: "mon-projet-finance",
+      repo: "CailBzd/mon-projet-finance",
+      description: "Application de gestion financière pour suivre ses dépenses et investissements.",
+      technologies: "Vue.js, Firebase, Chart.js"
+    },
+    {
+      name: "TODO-List-CQRS",
+      repo: "CailBzd/TODO-List-CQRS-",
+      description: "Un gestionnaire de tâches implémentant le pattern CQRS pour améliorer la scalabilité.",
+      technologies: ".NET Core, React, PostgreSQL"
+    },
+    {
+      name: "EventPlanner",
+      repo: "CailBzd/EventPlanner",
+      description: "Application permettant d'organiser et gérer des événements en ligne.",
+      technologies: "Angular, NestJS, MySQL"
+    }
   ];
 
   return (
@@ -28,16 +57,16 @@ export default function Projects() {
             key={index}
             className="bg-white rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
           >
-            <h2 className="text-xl font-semibold text-gray-900">{project.name}</h2>
-            <p className="text-gray-500 mt-2">Dépôt GitHub :</p>
             <Link
               href={`https://github.com/${project.repo}`}
               target="_blank"
-              className="flex items-center mt-2 text-blue-600 hover:text-blue-800"
+              className="text-xl font-semibold text-blue-500 flex items-center"
             >
               <Github size={20} className="mr-2" />
-              {project.repo}
+              {project.name}
             </Link>
+            <p className="text-gray-700 mt-2">{project.description}</p>
+            <p className="text-gray-500 mt-2">Technologies : {project.technologies}</p>
           </div>
         ))}
       </div>
