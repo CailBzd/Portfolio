@@ -76,17 +76,17 @@ export default function About() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md">
+    <div className="max-w-4xl mx-auto p-4 bg-white rounded-lg shadow-md">
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-12 rounded-lg shadow-lg mb-8">
-        <h1 className="text-5xl font-bold">À propos de moi</h1>
+        <h1 className="text-4xl font-bold">À propos de moi</h1>
         <p className="text-lg mt-2">
           Product Owner et Développeur passionné par l&apos;innovation et la technologie.
         </p>
       </div>
 
       {/* Navigation rapide */}
-      <div className="flex justify-center space-x-6 mb-8">
+      <div className="flex justify-center space-x-6 mb-8 flex-wrap">
         <a href="#experience" className="text-blue-600 hover:underline font-medium">Expériences</a>
         <a href="#formation" className="text-blue-600 hover:underline font-medium">Formations</a>
       </div>

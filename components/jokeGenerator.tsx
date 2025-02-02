@@ -10,13 +10,10 @@ const jokes = [
   "À quoi sert Internet Explorer ? À télécharger Google Chrome.",
   "Quand est-ce que Windows ne bug pas ? Quand l'ordinateur est éteint.",
   "De quelle couleur sont tes yeux ? ;) #1292f4 et toi ? :)",
-  "Les filles, c'est comme les noms de domaine. Celles que j'aime sont déjà prises.",
   "Que dit une mère à son fils geek quand le dîner est servi ? Alt Tab !!!",
   "T'as pris quoi comme résolution pour cette nouvelle année ? 1080p.",
-  "Un homme rentre chez lui : - Chérie, j'ai une bonne et une mauvaise nouvelle. - La bonne ? - J'ai trouvé cette bague en or. - La mauvaise ? - On part pour le Mordor.",
   "Quelle est la meilleure heure pour écouter de la musique ? Deezer...",
   "De nos jours, le zip ça devient rar...",
-  "Comment appelle-t-on le sexe de la Schtroumpfette ? La Bluetouffe."
 ];
 
 

@@ -15,16 +15,14 @@ const BugCatcher = () => {
 
   const MAX_BUGS = 30;
 
-  // Générer des bugs
+
   useEffect(() => {
-    
     if (!gameStarted || gameOver || bugs.length >= MAX_BUGS) return;
 
     const interval = setInterval(() => {
       setBugs((prevBugs) => {
-        if (prevBugs.length >= MAX_BUGS-1) {
-          console.log("game over")
-          setGameOver(true); // Mettre fin au jeu si la limite est atteinte
+        if (prevBugs.length >= MAX_BUGS - 1) {
+          setGameOver(true); 
           return prevBugs;
         }
 
@@ -34,7 +32,7 @@ const BugCatcher = () => {
         ];
       });
 
-      setIntervalTime((prevTime) => Math.max(prevTime - 30, 100));
+      setIntervalTime((prevTime) => Math.max(prevTime - 20, 100));
     }, intervalTime);
 
     return () => clearInterval(interval);
@@ -168,7 +166,7 @@ const BugCatcher = () => {
                   <div
                     key={bug.id}
                     onClick={() => catchBug(bug.id)}
-                    className="absolute bg-red-500 w-5 h-5 rounded-full cursor-pointer"
+                    className="absolute bg-red-500 w-5 h-5 rounded-full cursor-pointer transition-transform transform hover:scale-110"
                     style={{ left: `${bug.x}%`, top: `${bug.y}%` }}
                   />
                 ))}
