@@ -17,6 +17,12 @@ export default function Projects() {
       technologies: "React Native, Firebase, TypeScript"
     },
     {
+      name: "NutriPit",
+      repo: "CailBzd/NutriPit",
+      description: "NutriPit est une solution numérique complète destinée aux établissements où la nutrition des personnes doit être strictement contrôlée.",
+      technologies: "React Native, NextJs, supabase, TypeScriptZ"
+    },
+    {
       name: "LocalMarketPlace",
       repo: "CailBzd/LocalMarketPlace",
       description: "Une plateforme pour vendre et acheter des produits locaux facilement.",
